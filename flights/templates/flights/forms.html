@@ -1,37 +1,35 @@
-{% extends 'flights/layout.html' %}
-{% block body %}
+{% extends 'flights/layout.html' %} {% block body %}
 <main>
-    <div class="content-wrapper">
+  <div class="content-wrapper">
+    <h2>Create</h2>
 
-        <h2>Create </h2>
-        
-        <section>
-            <h3>Add Airline</h3>
-            <form method="post">
-                {% csrf_token %}
-                {{ airline_form.as_p }}
-                <button type="submit" name="form_type" value="airline">Create Airline</button>
-            </form>
-        </section>
-        
-        <section>
-            <h3>Add City</h3>
-            <form method="post">
-                {% csrf_token %}
-                {{ city_form.as_p }}
-                <button type="submit" name="form_type" value="city">Create City</button>
-            </form>
-        </section>
-        
-        <section>
-            <h3>Add Flight</h3>
-            <form method="post">
-                {% csrf_token %}
-                {{ flight_form.as_p }}
-                <button type="submit" name="form_type" value="flight">Create Flight</button>
-            </form>
-        </section>
-    </div>
+    <section>
+      <h3>Add Airline</h3>
+      <form method="post">
+        {% csrf_token %} {{ airline_form.as_p }}
+        <button type="submit" name="form_type" value="airline">
+          Create Airline
+        </button>
+      </form>
+    </section>
+
+    <section>
+      <h3>Add City</h3>
+      <form method="post">
+        {% csrf_token %} {{ city_form.as_p }}
+        <button type="submit" name="form_type" value="city">Create City</button>
+      </form>
+    </section>
+
+    <section>
+      <h3>Add Flight</h3>
+      <form method="post">
+        {% csrf_token %} {{ flight_form.as_p }}
+        <button type="submit" name="form_type" value="flight">
+          Create Flight
+        </button>
+      </form>
+    </section>
+  </div>
 </main>
 {% endblock %}
-    

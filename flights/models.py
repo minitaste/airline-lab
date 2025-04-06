@@ -1,6 +1,13 @@
 from django.db import models
 
 
+class SiteVisits(models.Model):
+    count = models.PositiveIntegerField(default=0)
+
+    def __str__(self):
+        return f"Total visits: {self.count}"
+
+
 class Airline(models.Model):
     name = models.CharField(max_length=100)
 

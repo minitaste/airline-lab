@@ -1,16 +1,22 @@
 from django.shortcuts import render, redirect
-from . models import Flight
+from . models import Flight, SiteVisits
 from .forms import AirlineForm, CityForm, FlightForm
 
 
 def index(request):
-    return render(request, "flights/index.html")
+    visit, created = SiteVisits.objects.get_or_create(pk=1)
+    visit.count += 1
+    visit.save()
+
+    return render(request, "flights/index.html", {
+        "visit_count": visit.count,
+    })
 
 
 def flights(request):
     flights = Flight.objects.all()
     return render(request, "flights/flights.html", {
-        "flights": flights
+        "flights": flights,
     })
 
 

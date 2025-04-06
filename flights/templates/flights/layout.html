@@ -1,47 +1,56 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SkyBIT - Airplane Tickets</title>
-    <link rel="stylesheet" href="{% static 'styles/flights/index.css' %}">
-    <link rel="stylesheet" href="{% static 'styles/flights/style-flight.css' %}">
-    <link rel="stylesheet" href="{% static 'styles/flights/forms.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/flights/index.css' %}" />
+    <link
+      rel="stylesheet"
+      href="{% static 'styles/flights/style-flight.css' %}"
+    />
+    <link rel="stylesheet" href="{% static 'styles/flights/forms.css' %}" />
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="{% static 'js/main.js' %}"></script>
     <script src="{% static 'js/flights.js' %}"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="content-wrapper">
-            <h1>SkyBIT</h1>
-            <img src="{% static 'img/logo.png' %}" alt="SkyBIT Logo" width="170" height="170">
-            <nav>
-                <ul>
-                    <li><a href="{% url 'index' %}">Home</a></li>
-                    <li><a href="{% url 'flights' %}">Flights</a></li>
-                    <li><a href="{% url 'create-forms' %}">Create</a></li>
-                    <li><a href="{% url 'index' %}#popular-destinations">Destinations</a></li>
-                    <li><a href="{% url 'index' %}#why-choose-us">Why Choose Us</a></li>
-                </ul>
-            </nav>
-        </div>
+      <div class="content-wrapper">
+        <h1>SkyBIT</h1>
+        <img
+          src="{% static 'img/logo.png' %}"
+          alt="SkyBIT Logo"
+          width="170"
+          height="170"
+        />
+        <nav>
+          <ul>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'flights' %}">Flights</a></li>
+            <li><a href="{% url 'create-forms' %}">Create</a></li>
+            <li>
+              <a href="{% url 'index' %}#popular-destinations">Destinations</a>
+            </li>
+            <li><a href="{% url 'index' %}#why-choose-us">Why Choose Us</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
-    {% block body %}
-    {% endblock body %}
+    {% block body %} {% endblock body %}
     <footer>
-        <div class="content-wrapper">
-            <div>
-                <h3>Contact Us</h3>
-                <div class="contact-info">
-                    <p>Email: info@skybit.com</p>
-                    <p>Phone: 1-800-SKYBIT</p>
-                </div>
-            </div>
-            <p>&copy; 2024 SkyBIT. All rights reserved.</p>
+      <div class="content-wrapper">
+        <div>
+          <h3>Contact Us</h3>
+          <div class="contact-info">
+            <p>Email: info@skybit.com</p>
+            <p>Phone: 1-800-SKYBIT</p>
+          </div>
         </div>
+        <p>&copy; 2024 SkyBIT. All rights reserved.</p>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
