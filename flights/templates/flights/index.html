@@ -32,7 +32,22 @@
     <section id="search">
       <h2>Find Your Flight</h2>
       <p>Search for the best flight deals and book your next adventure!</p>
-      <a href="flights.html"><button>Search Flights</button></a>
+      <a
+        href="{% url 'flights' %}"
+        style="
+          display: inline-block;
+          background-color: #003366;
+          color: white;
+          border: none;
+          padding: 10px 20px;
+          font-size: 1rem;
+          font-weight: bold;
+          border-radius: 5px;
+          cursor: pointer;
+          text-decoration: none;
+        "
+        >Search Flights</a
+      >
     </section>
 
     <section id="popular-destinations">

@@ -44,10 +44,6 @@ $(document).ready(function() {
         }
     });
 
-    $('#search button').on('click', function(e) {
-        e.preventDefault();
-        window.location.href = 'flights.html';
-    });
 
     $('#popular-destinations td').hover(
         function() {

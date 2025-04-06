@@ -118,16 +118,6 @@ h2 {
     font-size: 1.1rem;
 }
 
-#search button {
-    background-color: #003366;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-}
 
 #search button:hover {
     background-color: #0055aa;
