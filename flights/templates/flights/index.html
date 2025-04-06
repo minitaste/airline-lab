@@ -1,0 +1,75 @@
+{% extends 'flights/layout.html' %}
+{% load static %}
+
+{% block body %}  
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide">
+                <img src="{% static 'img/slider1.jpg' %}" alt="Travel Destination 1">
+                <div class="slide-content">
+                    <h2>Discover Amazing Destinations</h2>
+                    <p>Book your next adventure with SkyBIT</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="{% static 'img/slider2.png' %}" alt="Travel Destination 2">
+                <div class="slide-content">
+                    <h2>Best Flight Deals</h2>
+                    <p>Save up to 30% on your next flight</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="{% static 'img/slider3.jpeg' %}" alt="Travel Destination 3">
+                <div class="slide-content">
+                    <h2>Premium Service</h2>
+                    <p>Experience luxury travel with us</p>
+                </div>
+            </div>
+        </div>
+        <button class="slider-btn prev">❮</button>
+        <button class="slider-btn next">❯</button>
+        <div class="slider-dots"></div>
+    </div>
+    <main>
+        <div class="content-wrapper">
+            <section id="search">
+                <h2>Find Your Flight</h2>
+                <p>Search for the best flight deals and book your next adventure!</p>
+                <a href="flights.html"><button>Search Flights</button></a>
+            </section>
+            
+            <section id="popular-destinations">
+                <h2>Popular Destinations</h2>
+                <table>
+                    <tr>
+                        <td>
+                            <h3>New York</h3>
+                            <p>From $299</p>
+                        </td>
+                        <td>
+                            <h3>London</h3>
+                            <p>From $399</p>
+                        </td>
+                        <td>
+                            <h3>Tokyo</h3>
+                            <p>From $599</p>
+                        </td>
+                        <td>
+                            <h3>Paris</h3>
+                            <p>From $349</p>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+            <section id="why-choose-us">
+                <h2>Why Choose Us</h2>
+                <ul>
+                    <li>Best Price Guarantee</li>
+                    <li>24/7 Customer Support</li>
+                    <li>Flexible Booking Options</li>
+                    <li>No Hidden Fees</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+{% endblock %}

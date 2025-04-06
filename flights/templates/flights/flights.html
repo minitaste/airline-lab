@@ -1,0 +1,47 @@
+{% extends 'flights/layout.html' %}
+{% load static %}
+
+{% block body %}
+<main>
+    <div class="content-wrapper">
+        <section id="flight-results">
+            <h2>Available Flights</h2>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search flights...">
+            </div>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Airline</th>
+                            <th>Flight</th>
+                            <th>From</th>
+                            <th>To</th>
+                            <th>Departure</th>
+                            <th>Arrival</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for flight in flights %}
+                        <tr>
+                            <td>{{ flight.airline }}</td>
+                            <td>{{ flight.flight_id }}</td>
+                            <td>{{ flight.origin }}</td>
+                            <td>{{ flight.destination }}</td>
+                            <td>{{ flight.departure }}</td>
+                            <td>{{ flight.arrival }}</td>
+                            <td>${{ flight.price }}</td>
+                        </tr>
+                        {% empty %}
+                        <tr>
+                            <td colspan="7">No flights available.</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+</main>
+{% endblock %}
